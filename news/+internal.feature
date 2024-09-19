@@ -1,1 +1,0 @@
-Switch to OpenID Connect [Rafael Bermúdez Horcajada <rber474@gmail.com>]

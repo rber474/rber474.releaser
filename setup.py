@@ -15,7 +15,7 @@ long_description = "\n\n".join(
 
 setup(
     name="rber474.releaser",
-    version="1.0a1",
+    version="1.0a2",
     description="Custom releaser hooks for ONCE project based on zest.releaser",
     long_description=long_description,
     # Get more from https://pypi.org/classifiers/
