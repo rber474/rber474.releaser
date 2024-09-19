@@ -1,4 +1,4 @@
 Contributors
 ============
 
-- Rafael Bermúdez Horcajada, r.bermudez@ibermatica.com
+- Rafael Bermúdez Horcajada, rber474@gmail.com
