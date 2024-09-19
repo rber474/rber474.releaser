@@ -13,11 +13,9 @@ jobs:
       matrix:
         config:
         # [Python version, tox env]
-        - ["3.8",   "py38"]
         - ["3.9",   "py39"]
         - ["3.10",   "py310"]
         - ["3.11",   "py311"]
-        - ["pypy3.8", "pypy3"]
 
     runs-on: ubuntu-20.04
     name: ${{ matrix.config[1] }}
