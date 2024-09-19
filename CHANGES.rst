@@ -6,6 +6,15 @@ Changelog
 
 .. towncrier release notes start
 
+1.0a3 (2024-09-19)
+------------------
+
+Bug fixes:
+
+
+- Fix release workfloww [Rafael Bermúdez Horcajada <rber474@gmail.com>]
+
+
 1.0a2 (2024-09-19)
 ------------------
 
