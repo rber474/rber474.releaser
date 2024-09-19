@@ -1,85 +1,78 @@
-.. This README is meant for consumption by humans and PyPI. PyPI can render rst files so please do not use Sphinx features.
-   If you want to learn more about writing documentation, please check out: http://docs.plone.org/about/documentation_styleguide.html
-   This text does not appear on PyPI or github. It is a comment.
 
-.. image:: https://github.com/collective/once.releaser/actions/workflows/plone-package.yml/badge.svg
-    :target: https://github.com/collective/once.releaser/actions/workflows/plone-package.yml
-
-.. image:: https://coveralls.io/repos/github/collective/once.releaser/badge.svg?branch=main
-    :target: https://coveralls.io/github/collective/once.releaser?branch=main
+.. image:: https://coveralls.io/repos/github/rber474.releaser/badge.svg?branch=main
+    :target: https://coveralls.io/github/rber474.releaser?branch=main
     :alt: Coveralls
 
-.. image:: https://codecov.io/gh/collective/once.releaser/branch/master/graph/badge.svg
-    :target: https://codecov.io/gh/collective/once.releaser
+.. image:: https://codecov.io/gh/rber474.releaser/branch/master/graph/badge.svg
+    :target: https://codecov.io/gh/rber474.releaser
 
-.. image:: https://img.shields.io/pypi/v/once.releaser.svg
-    :target: https://pypi.python.org/pypi/once.releaser/
+.. image:: https://img.shields.io/pypi/v/rber474.releaser.svg
+    :target: https://pypi.python.org/pypi/rber474.releaser/
     :alt: Latest Version
 
-.. image:: https://img.shields.io/pypi/status/once.releaser.svg
-    :target: https://pypi.python.org/pypi/once.releaser
+.. image:: https://img.shields.io/pypi/status/rber474.releaser.svg
+    :target: https://pypi.python.org/pypi/rber474.releaser
     :alt: Egg Status
 
-.. image:: https://img.shields.io/pypi/pyversions/once.releaser.svg?style=plastic   :alt: Supported - Python Versions
+.. image:: https://img.shields.io/pypi/pyversions/rber474.releaser.svg?style=plastic   :alt: Supported - Python Versions
 
-.. image:: https://img.shields.io/pypi/l/once.releaser.svg
-    :target: https://pypi.python.org/pypi/once.releaser/
+.. image:: https://img.shields.io/pypi/l/rber474.releaser.svg
+    :target: https://pypi.python.org/pypi/rber474.releaser/
     :alt: License
 
 
-=============
-once.releaser
-=============
+================
+rber474.releaser
+================
 
-Custom releaser hooks for ONCE project based on zest.releaser
+Custom releaser hooks for JIRA project based on zest.releaser and cs.zestreleaser.changelog.
+This hook extract the commit messages from the last release tag to the current tag and create the towncrier news fragments, based on tbhe JIRA issue and the towncrier type.
 
-Features
---------
+Currently it only supports GIT VCS logs.
 
-- Can be bullet points
+The commit messages must be in the following format:
 
+<optional prefix> <issue> <type> <message> [<author>]
+
+
+Author will be extracted from the git history.
 
 Examples
 --------
 
-This add-on can be seen in action at the following sites:
-- Is there a page on the internet where everybody can see the features?
+The following commit messages are valid:
 
+Revert WEBAGL-1234 feature Add new feature
+Add WEBAGL-1234 feature new feature
+WEBAGL-1235 bugfix Fix AttributeError RequestContainer object has no attribute getClientForURL
 
-Documentation
--------------
+Fragmentes files will be created in the following format:
 
-Full documentation for end users can be found in the "docs" folder, and is also available online at http://docs.plone.org/foo/bar
+**news/feature/WEBAGL-1234.feature**
+```
+Add new feature [Rafael Bermúdez Horcajada <myemail@email.com>]
+Revert new feature [Rafael Bermúdez Horcajada <myemail@email.com>]
+```
 
-
-Translations
-------------
-
-This product has been translated into
-
-- Klingon (thanks, K'Plai)
+**news/feature/WEBAGL-1235.bugfix**
+```
+Fix AttributeError RequestContainer object has no attribute getClientForURL [Rafael Bermúdez Horcajada <myemail@email.com>]
+```
 
 
 Installation
 ------------
 
-Install once.releaser by adding it to your buildout::
+Using pip:
 
-    [buildout]
-
-    ...
-
-    eggs =
-        once.releaser
-
-
-and then running ``bin/buildout``
-
+```
+$ pip install rber474.releaser
+```
 
 Authors
 -------
 
-Provided by awesome people ;)
+- Rafael Bermúdez Horcajada
 
 
 Contributors
@@ -93,16 +86,8 @@ Put your name here, you deserve it!
 Contribute
 ----------
 
-- Issue Tracker: https://github.com/collective/once.releaser/issues
-- Source Code: https://github.com/collective/once.releaser
-- Documentation: https://docs.plone.org/foo/bar
-
-
-Support
--------
-
-If you are having issues, please let us know.
-We have a mailing list located at: project@example.com
+- Issue Tracker: https://github.com/rber474.releaser/issues
+- Source Code: https://github.com/rber474.releaser
 
 
 License

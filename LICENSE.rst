@@ -1,4 +1,4 @@
-once.releaser Copyright 2024, Rafael Bermúdez Horcajada
+rber474.releaser Copyright 2024, Rafael Bermúdez Horcajada
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License version 2

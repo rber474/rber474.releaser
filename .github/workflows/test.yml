@@ -1,0 +1,41 @@
+name: tests
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+  schedule:
+    - cron: '13 7 * * 0'  # run once a week on Sunday
+  # Allow to run this workflow manually from the Actions tab
+  workflow_dispatch:
+jobs:
+  build:
+    strategy:
+      matrix:
+        config:
+        # [Python version, tox env]
+        - ["3.8",   "py38"]
+        - ["3.9",   "py39"]
+        - ["3.10",   "py310"]
+        - ["3.11",   "py311"]
+        - ["pypy3.8", "pypy3"]
+
+    runs-on: ubuntu-20.04
+    name: ${{ matrix.config[1] }}
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: ${{ matrix.config[0] }}
+        cache: 'pip'
+        cache-dependency-path: |
+          setup.*
+          tox.ini
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install tox
+
+    - name: Test
+      run: tox -e ${{ matrix.config[1] }}
