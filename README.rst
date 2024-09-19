@@ -30,9 +30,9 @@ This hook extract the commit messages from the last release tag to the current t
 
 Currently it only supports GIT VCS logs.
 
-The commit messages must be in the following format:
+The commit messages must be in the following format::
 
-<optional prefix> <issue> <type> <message> [<author>]
+    <optional prefix> <issue_name>-<issue_number> <towncrier type> <message> [<author>]
 
 
 Author will be extracted from the git history.
@@ -48,26 +48,25 @@ WEBAGL-1235 bugfix Fix AttributeError RequestContainer object has no attribute g
 
 Fragmentes files will be created in the following format:
 
-**news/feature/WEBAGL-1234.feature**
-```
-Add new feature [Rafael Bermúdez Horcajada <myemail@email.com>]
-Revert new feature [Rafael Bermúdez Horcajada <myemail@email.com>]
-```
+**news/feature/WEBAGL-1234.feature** ::
 
-**news/feature/WEBAGL-1235.bugfix**
-```
-Fix AttributeError RequestContainer object has no attribute getClientForURL [Rafael Bermúdez Horcajada <myemail@email.com>]
-```
+    Add new feature [Rafael Bermúdez Horcajada <myemail@email.com>]
+    Revert new feature [Rafael Bermúdez Horcajada <myemail@email.com>]
+
+
+**news/feature/WEBAGL-1235.bugfix** ::
+
+    Fix AttributeError RequestContainer object has no attribute getClientForURL [Rafael Bermúdez Horcajada <myemail@email.com>]
+    
 
 
 Installation
 ------------
 
-Using pip:
+Using pip::
 
-```
-$ pip install rber474.releaser
-```
+    $ pip install rber474.releaser
+
 
 Authors
 -------
