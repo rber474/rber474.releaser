@@ -71,6 +71,9 @@ def create_newsfile(context):
 
             # Write the newsfile content
             write_text_file(newsfile_path, newsfile_content)
+            # Ensure the newsfile is added to the git index
+            # to avoid pre-commit hooks to fail
+            execute_command(["git", "add", newsfile_content])
         if issues:
             msg = "Update towncrier fragments"
             commit_cmd = vcs.cmd_commit(msg)
