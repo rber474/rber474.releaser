@@ -70,5 +70,8 @@ setup(
         "zest.releaser.bumpversion.before": [
             "create_newsfile = rber474.releaser.towncrier:create_newsfile",
         ],
+        "zest.releaser.prereleaser.before": [
+            "create_newsfile = rber474.releaser.towncrier:create_newsfile",
+        ],
     },
 )

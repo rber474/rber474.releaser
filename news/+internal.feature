@@ -1,0 +1,1 @@
+Execute at hook zest.releaser.prereleaser.before
