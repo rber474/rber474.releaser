@@ -6,6 +6,15 @@ Changelog
 
 .. towncrier release notes start
 
+1.0a8 (2024-09-20)
+------------------
+
+New features:
+
+
+- Git add after all files are updated.
+
+
 1.0a7 (2024-09-20)
 ------------------
 
