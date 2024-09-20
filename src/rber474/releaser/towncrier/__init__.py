@@ -96,7 +96,7 @@ def extract_issues(vcs):
     # WEBAgL-21101 feature AttributeError: 'RequestContainer' object has no attribute 'getClientForURL [rbermudez]
     # test WEBAgL-21101 bugfix AttributeError: 'RequestContainer' object has no attribute 'getClientForURL [rbermudez]
     pattern = r"{}".format(
-        rf'(?P<prefix>.*\s? |)(?P<issue>\w*\S-\d+) (?P<type>({"|".join(types)})) (?P<message>.*) (?P<author>\[.*?\])'
+        rf'(?i)(?P<prefix>.*?|)(?P<issue>\w*\S-\d+) (?P<type>({"|".join(types)})) (?P<message>.*) (?P<author>\[.*?\])'
     )
 
     # Extract the commit messages that include the issue number, issue type and
@@ -106,6 +106,7 @@ def extract_issues(vcs):
         for commit in pretty_data
         if re.search(pattern, commit)
     ]
+
     if matching:
         print(
             f"{Style.GREEN}These are all the commits since the last tag:{Style.RESET}"
