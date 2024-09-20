@@ -6,6 +6,15 @@ Changelog
 
 .. towncrier release notes start
 
+1.0a5 (2024-09-20)
+------------------
+
+New features:
+
+
+- Execute at hook zest.releaser.prereleaser.before
+
+
 1.0a4 (2024-09-20)
 ------------------
 
