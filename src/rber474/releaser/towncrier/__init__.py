@@ -70,7 +70,7 @@ def create_newsfile(context):
                 raise
 
             # Write the newsfile content
-            write_text_file(newsfile_path, newsfile_content, newsfile_encoding)
+            write_text_file(newsfile_path, newsfile_content)
         if issues:
             msg = "Update towncrier fragments"
             commit_cmd = vcs.cmd_commit(msg)
