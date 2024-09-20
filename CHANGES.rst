@@ -6,6 +6,15 @@ Changelog
 
 .. towncrier release notes start
 
+1.0a4 (2024-09-20)
+------------------
+
+Bug fixes:
+
+
+- Fix regex pattern to extract prefix properly [Rafael Bermúdez Horcajada <rber474@gmail.com>]
+
+
 1.0a3 (2024-09-19)
 ------------------
 
