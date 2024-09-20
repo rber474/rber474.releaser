@@ -6,6 +6,15 @@ Changelog
 
 .. towncrier release notes start
 
+1.0a7 (2024-09-20)
+------------------
+
+Bug fixes:
+
+
+- Ensure the newsfile is added to the git index to avoid pre-commit hooks to fail
+
+
 1.0a6 (2024-09-20)
 ------------------
 

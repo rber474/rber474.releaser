@@ -1,1 +1,0 @@
-Ensure the newsfile is added to the git index to avoid pre-commit hooks to fail
