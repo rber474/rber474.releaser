@@ -6,6 +6,15 @@ Changelog
 
 .. towncrier release notes start
 
+1.0a6 (2024-09-20)
+------------------
+
+Bug fixes:
+
+
+- Don't assign encoding to file
+
+
 1.0a5 (2024-09-20)
 ------------------
 
