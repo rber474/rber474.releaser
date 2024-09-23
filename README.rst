@@ -26,7 +26,7 @@ rber474.releaser
 ================
 
 Custom releaser hooks for JIRA project based on zest.releaser and cs.zestreleaser.changelog.
-This hook extract the commit messages from the last release tag to the current tag and create the towncrier news fragments, based on tbhe JIRA issue and the towncrier type.
+This hook extract the commit messages from the last release tag to the current tag and create the towncrier news fragments, based on the JIRA issue and the towncrier type.
 
 Currently it only supports GIT VCS logs.
 
@@ -42,19 +42,19 @@ Examples
 
 The following commit messages are valid:
 
-Revert WEBAGL-1234 feature Add new feature
-Add WEBAGL-1234 feature new feature
-WEBAGL-1235 bugfix Fix AttributeError RequestContainer object has no attribute getClientForURL
+- Revert WEBAGL-1234 feature Add new feature
+- Add WEBAGL-1234 feature new feature
+- WEBAGL-1235 bugfix Fix AttributeError RequestContainer object has no attribute getClientForURL
 
-Fragmentes files will be created in the following format:
+Fragments files will be created in the following format:
 
-**news/feature/WEBAGL-1234.feature** ::
+**news/WEBAGL-1234.feature** ::
 
     Add new feature [Rafael Bermúdez Horcajada <myemail@email.com>]
     Revert new feature [Rafael Bermúdez Horcajada <myemail@email.com>]
 
 
-**news/feature/WEBAGL-1235.bugfix** ::
+**news/WEBAGL-1235.bugfix** ::
 
     Fix AttributeError RequestContainer object has no attribute getClientForURL [Rafael Bermúdez Horcajada <myemail@email.com>]
     
