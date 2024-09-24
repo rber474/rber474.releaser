@@ -6,6 +6,15 @@ Changelog
 
 .. towncrier release notes start
 
+1.0a9 (2024-09-24)
+------------------
+
+Bug fixes:
+
+
+- Fix duplicate entries
+
+
 1.0a8 (2024-09-20)
 ------------------
 
