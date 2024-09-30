@@ -6,6 +6,15 @@ Changelog
 
 .. towncrier release notes start
 
+1.0a10 (2024-09-30)
+-------------------
+
+Bug fixes:
+
+
+- Extract commits ignoring merged [Bermúdez Horcajada, Rafael] (#1)
+
+
 1.0a9 (2024-09-24)
 ------------------
 
