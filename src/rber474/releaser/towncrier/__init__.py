@@ -139,6 +139,7 @@ def get_history(vcs):
             log_command = get_all_commits_command(vcs)
 
     if log_command:
+        log_command.append("--no-merges")
         data = execute_command(log_command)
         pretty_data = prettyfy_logs(data, vcs)
 
